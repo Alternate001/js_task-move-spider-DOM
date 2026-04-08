@@ -6,7 +6,7 @@ const spider = document.querySelector('.spider');
 wall.style.position = 'relative';
 spider.style.position = 'absolute';
 
-document.addEventListener('click', (e) => {
+wall.addEventListener('click', (e) => {
   const wallBond = wall.getBoundingClientRect();
   let topBox = e.clientY - wallBond.top - spider.offsetHeight / 2;
   let leftBox = e.clientX - wallBond.left - spider.offsetWidth / 2;
