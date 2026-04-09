@@ -23,8 +23,4 @@ wall.addEventListener('click', (e) => {
 
   spider.style.top = allowedTop + 'px';
   spider.style.left = allowedLeft + 'px';
-  console.log (`allowed top ${allowedTop}`);
-  console.log (`click top ${topBox}`);
-  console.log (`allowed left ${allowedLeft}`);
-  console.log (`click left ${leftBox}`);
 });
