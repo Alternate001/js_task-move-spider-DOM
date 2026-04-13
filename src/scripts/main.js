@@ -11,14 +11,14 @@ const clamp = (value, min, max) => {
 };
 
 wall.addEventListener('click', (e) => {
-  const wallBond = wall.getBoundingClientRect();
+  const wallBounding = wall.getBoundingClientRect();
 
-  const leftBox = e.clientX - wallBond.left - spider.offsetWidth / 2;
-  const maxLeft = wallBond.width - spider.offsetWidth;
+  const leftBox = e.clientX - wallBounding.left - spider.offsetWidth / 2;
+  const maxLeft = wallBounding.width - spider.offsetWidth;
   const allowedLeft = clamp(leftBox, 0, maxLeft);
 
-  const topBox = e.clientY - wallBond.top - spider.offsetHeight / 2;
-  const maxTop = wallBond.height - spider.offsetHeight;
+  const topBox = e.clientY - wallBounding.top - spider.offsetHeight / 2;
+  const maxTop = wallBounding.height - spider.offsetHeight;
   const allowedTop = clamp(topBox, 0, maxTop);
 
   spider.style.top = allowedTop + 'px';
